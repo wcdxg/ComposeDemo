@@ -17,7 +17,6 @@ import com.yuaihen.composedemo.WeViewModel
 @Composable
 fun HomePage() {
     val viewModel = viewModel<WeViewModel>()
-
 }
 
 @Composable
@@ -33,7 +32,7 @@ fun Home() {
             //创建ViewPager
             Pager(state = pagerState, Modifier.weight(1f)) {
                 when (page) {
-//                    0 -> ChatList()
+                    0 -> ChatList()
 //                    1 -> ContactList()
 //                    2 -> DiscoveryList()
 //                    3 -> MeList()

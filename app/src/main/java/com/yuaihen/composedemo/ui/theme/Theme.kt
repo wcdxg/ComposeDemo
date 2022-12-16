@@ -3,11 +3,9 @@ package com.yuaihen.composedemo.ui.theme
 import androidx.compose.animation.animateColorAsState
 import androidx.compose.animation.core.TweenSpec
 import androidx.compose.animation.core.animateFloatAsState
-import androidx.compose.foundation.isSystemInDarkTheme
-import androidx.compose.material.MaterialTheme
+import androidx.compose.material3.MaterialTheme
 import androidx.compose.runtime.*
 import androidx.compose.ui.graphics.Color
-import com.google.accompanist.insets.ProvideWindowInsets
 
 private val LightColorPalette = WeColors(
     bottomBar = white1,
@@ -195,27 +193,9 @@ fun WeTheme(theme: WeTheme.Theme = WeTheme.Theme.Light, content: @Composable () 
 
     CompositionLocalProvider(LocalWeColors provides colors) {
         MaterialTheme(shapes = Shapes) {
-            ProvideWindowInsets(content = content)
+//            ProvideWindowInsets(content = content)
         }
     }
 }
 
 
-@Composable
-fun ComposeDemoTheme(
-    darkTheme: Boolean = isSystemInDarkTheme(),
-    content: @Composable() () -> Unit
-) {
-    val colors = if (darkTheme) {
-        DarkColorPalette
-    } else {
-        LightColorPalette
-    }
-
-    MaterialTheme(
-        colors = MaterialTheme.colors,
-        typography = Typography,
-        shapes = Shapes,
-        content = content
-    )
-}

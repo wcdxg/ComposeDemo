@@ -18,7 +18,8 @@ class WeChatActivity : ComponentActivity() {
 
         WindowCompat.setDecorFitsSystemWindows(window, false)
         setContent {
-            WeTheme() {
+            WeTheme {
+//                Text(text = "Hello", color = MaterialTheme.colors.primary, fontSize = 30.sp)
                 Home()
             }
         }

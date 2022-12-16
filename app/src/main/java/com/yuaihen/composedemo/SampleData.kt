@@ -1,5 +1,7 @@
 package com.yuaihen.composedemo
 
+import com.yuaihen.composedemo.ui.Message
+
 /**
  * Created by Yuaihen.
  * on 2021/08/16
